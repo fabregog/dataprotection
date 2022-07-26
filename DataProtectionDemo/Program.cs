@@ -19,7 +19,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql("Server
 
 builder.Services.AddDataProtection()
     .SetDefaultKeyLifetime(TimeSpan.FromDays(7))
-    .PersistKeysToAzureBlobStorage("DefaultEndpointsProtocol=https;AccountName=blobdataprotection;AccountKey=YANZiHWIi52UUWkTQmvq41HSImGa2l3pgOzKxt0JIX8aAJnGTPaA86kGycr3OF0Zi07EBHimL5Hi+AStjZiCGA==;EndpointSuffix=core.windows.net",
+    .PersistKeysToAzureBlobStorage("string-connection",
                                                                    "dataprotection",
                                                                    "data");
 
